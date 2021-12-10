@@ -104,17 +104,17 @@ export default function Home() {
       </Head>
 
       <SignMethods>
-      <button className="button" onClick={closeMenu}>
+     {user &&  <button className="button" onClick={closeMenu}>
         
-      <Image
-                alt="Close"
-                src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Cross-256.png"
-                width={25}
-                height={25}
-              />
-
-      </button>
-
+        <Image
+                  alt="Close"
+                  src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Cross-256.png"
+                  width={25}
+                  height={25}
+                />
+  
+        </button>
+  }
         {user ? (
           <>
             <Button onClick={signOut}>

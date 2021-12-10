@@ -95,6 +95,7 @@ export default function Home() {
 
   }
 
+
   return (
     <div className="main-content">
       <Head>
@@ -103,7 +104,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SignMethods>
+      <SignMethods {...user}>
      {user &&  <button className="button" onClick={closeMenu}>
         
         <Image

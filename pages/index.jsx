@@ -155,7 +155,7 @@ export default function Home() {
                       width={25}
                       height={25}
                     />
-                    <p>Go to Author's Website</p>
+                    <p>Go to Author&apos;s Website</p>
                   </a>
                 </Link>
               </li>

@@ -1,0 +1,54 @@
+.messages {
+  margin-bottom: 5em;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 80%;
+  padding: 1em 2em;
+  border-radius: 0.7em;
+  margin: 1em;
+  background-color: #4444444b;
+
+  
+}
+
+.form {
+  input {
+    border-radius: 5em;
+    background-color: #DA0037;
+    border: none;
+    outline: none;
+    margin: 1em;
+    width: 80%;
+    padding: 1em 2em;
+    margin-left: 5%;
+    font-size: 1rem;
+    transition: 0.2s;
+
+    &:hover, &:focus {
+      filter: brightness(90%);
+    }
+
+    ::placeholder{
+    }
+  }
+
+  button {
+    background-color: #DA0037;
+    padding: 1em;
+    border-radius: 9999px;
+    transition: 0.2s;
+    cursor: pointer;
+
+    img {
+      margin-right: 0.4em;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.message {
+  background-color: #ededed23;
+  margin: 2em 0;
+  word-wrap: break-word;
+  padding: 0.5em;
+  border-radius: 1em;
+  max-width: 43%;
+
+  .info {
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      width: 2.5em;
+      height: 2.5em;
+      border-radius: 9999px;
+      margin-right: 0.7em;
+    }
+  }
+
+  .msg {
+    display: flex;
+    flex-flow: column wrap;
+    small,
+    span {
+    }
+
+    small{
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    span{
+        font-weight: 400;
+    }
+  }
+
+  .text {
+    p {
+      margin-top: 1em;
+      margin-left: 11%;
+      margin-right: 6%;
+    }
+  }
+}

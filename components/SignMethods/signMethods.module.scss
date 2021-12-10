@@ -1,15 +1,17 @@
+@import "../../styles/mediaQueries";
+
 .signMethods {
   width: 20vw;
   height: 100vh;
-  background-color: #4158d0;
-  background-image: url(https://cdn.pixabay.com/photo/2019/10/31/21/32/girl-4592925_960_720.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
+  
+  display: none;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+
+  @include screen(xl) {
+    display: flex;
+  }
 
   button {
     color: #e3e3e3;
@@ -71,11 +73,12 @@
   }
 
   footer {
-      color: #2c2c2c;
+      color: #eeeeee;
     display: flex;
     align-items: flex-start;
     font-weight: 700;
     cursor: default;
+    margin-top: 8em;
 
     span{
         margin: 0 0.2em;

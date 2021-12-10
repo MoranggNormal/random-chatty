@@ -1,0 +1,84 @@
+.signMethods {
+  width: 20vw;
+  height: 100vh;
+  background-color: #4158d0;
+  background-image: url(https://cdn.pixabay.com/photo/2019/10/31/21/32/girl-4592925_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    color: #e3e3e3;
+    font-size: 1.1em;
+    border-radius: 0.3em;
+    padding: 0.7em 1.3em;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+
+    p {
+      margin-left: 1em;
+    }
+
+    &:hover {
+      -webkit-filter: brightness(85%);
+    }
+  }
+
+  button {
+    background-image: radial-gradient(
+      circle farthest-corner at 1.3% 2.8%,
+      #af1b3f 0%,
+      #8f1433 100.2%
+    );
+    margin-top: 25%;
+  }
+
+  a {
+    color: #e3e3e3;
+    font-size: 1.1em;
+    padding: 0.7em 1.3em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    margin: 1em 0;
+
+    p {
+      margin-left: 1em;
+    }
+
+    &:hover {
+      -webkit-filter: brightness(85%);
+    }
+  }
+
+  footer {
+      color: #2c2c2c;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 700;
+    cursor: default;
+
+    span{
+        margin: 0 0.2em;
+    }
+  }
+}

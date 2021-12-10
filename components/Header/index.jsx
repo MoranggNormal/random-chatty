@@ -1,12 +1,25 @@
 import Image from "next/image";
 import Button from "../Button";
 import styles from "./header.module.scss";
+import {useState} from 'react'
 
 const Header = (props) => {
+
+  const [menu, setMenu] = useState(false)
+
+
   const openMenu = () => {
     const sideBar = document.querySelector("aside");
 
-    sideBar.style.display = "flex";
+    if(menu){
+      sideBar.style.display = "flex";
+      setMenu(false);
+    }
+
+    if(!menu){
+      sideBar.style.display = "none";
+      setMenu(true);
+    }
   };
 
   return (

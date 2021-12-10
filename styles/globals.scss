@@ -5,3 +5,28 @@
   padding: 0;
   box-sizing: border-box;
 };
+
+html{
+  scroll-behavior: smooth;
+  font-size: 14px;
+}
+
+body{
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+ul{
+  list-style: none;
+}

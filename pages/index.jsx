@@ -76,6 +76,7 @@ export default function Home() {
     // Start sign in process
     try {
       await firebase.auth().signInWithPopup(provider);
+      document.querySelector('aside').style.display = 'none';
     } catch (error) {
       console.log(error.message);
     }
@@ -89,6 +90,11 @@ export default function Home() {
     }
   };
 
+  const closeMenu = () => {
+    document.querySelector('aside').style.display = 'none';
+
+  }
+
   return (
     <div className="main-content">
       <Head>
@@ -98,6 +104,17 @@ export default function Home() {
       </Head>
 
       <SignMethods>
+      <button className="button" onClick={closeMenu}>
+        
+      <Image
+                alt="Close"
+                src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Cross-256.png"
+                width={25}
+                height={25}
+              />
+
+      </button>
+
         {user ? (
           <>
             <Button onClick={signOut}>
@@ -124,6 +141,8 @@ export default function Home() {
             </Button>
           </>
         )}
+
+
         <article>
           <nav>
             <ul>
@@ -202,9 +221,9 @@ export default function Home() {
         </footer>
       </SignMethods>
 
-      <MainChat>
+      {user && <MainChat>
         {user && <Channel user={user} />}
-      </MainChat>
+      </MainChat>}
 
 
     </div>

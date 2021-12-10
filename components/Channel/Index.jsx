@@ -67,7 +67,7 @@ const Channel = ({ user = null }) => {
               )
               .map((message) => (
                 <li key={message.id}>
-                  <Message {...message} />
+                  <Message {...message}/>
                 </li>
               ))}
           </ul>

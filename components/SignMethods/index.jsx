@@ -3,9 +3,9 @@ import styles from './signMethods.module.scss';
 
 const SignMethods = (props) => {
     return (
-        <section className={styles.signMethods}>
+        <aside className={styles.signMethods}>
             {props.children}
-        </section>
+        </aside>
     )
 }
 

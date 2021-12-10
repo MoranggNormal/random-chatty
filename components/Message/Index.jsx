@@ -25,7 +25,10 @@ const Message = ({
   if (!text) return null;
 
   return (
-    <section className={styles.message}>
+    <section
+      className={styles.message}
+      
+    >
       <div className={styles.info}>
         {photoURL ? (
           <img

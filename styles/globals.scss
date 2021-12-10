@@ -51,6 +51,7 @@ background-size: cover;
 .main-content {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
 }
 
 a {
@@ -65,4 +66,15 @@ button {
 
 ul {
   list-style: none;
+}
+
+
+.button{
+  position: absolute !important;
+  top: -12%;
+  left: 5%;
+
+  img{
+    filter: invert(1);
+  }
 }

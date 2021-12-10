@@ -1,9 +1,16 @@
+@import '../../styles/mediaQueries';
+
+
 .header{
-    width: 80vw;
+    width: 100vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 0.5em 1.3em;
+
+    div{
+        display: flex;
     align-items: center;
-    padding: 0.5em 4em;
+    }
 
     img{
         width: 3em;
@@ -14,5 +21,16 @@
     h1{
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
+    }
+
+    @include screen(xl) {
+        width: 80vw;
+        justify-content: flex-end;
+        padding: 0.5em 4em;
+      }
+
+    button{
+        filter: invert(1);
+
     }
 }

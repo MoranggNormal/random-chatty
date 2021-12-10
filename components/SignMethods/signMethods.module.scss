@@ -1,17 +1,24 @@
 @import "../../styles/mediaQueries";
 
 .signMethods {
-  width: 20vw;
+  width: 100vw;
   height: 100vh;
-  
+  background-color: rgb(36, 36, 36);
   display: none;
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  left: 0;
 
   @include screen(xl) {
+    position: inherit;
     display: flex;
+    background-color: transparent;
+    width: 20vw;
   }
+
+  
 
   button {
     color: #e3e3e3;
@@ -28,6 +35,8 @@
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
+
+   
 
     p {
       margin-left: 1em;
@@ -85,3 +94,5 @@
     }
   }
 }
+
+

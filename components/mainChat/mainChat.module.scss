@@ -1,7 +1,15 @@
+@import '../../styles/mediaQueries';
+
+
 .mainChat{
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     
     display: flex;
     flex-flow: column nowrap;
+    
+
+    @include screen(xl){
+        width: 80vw
+    }
 }

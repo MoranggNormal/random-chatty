@@ -27,7 +27,7 @@ const Header = (props) => {
       <header className={styles.header}>
         <div>
           <img src={props.photo} alt={props.name} />
-          <h1>Olá, {props.name}</h1>
+          <h1>Hello, {props.name}!</h1>
         </div>
 
         <Button onClick={openMenu}>

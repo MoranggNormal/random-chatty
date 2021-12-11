@@ -76,7 +76,7 @@ export default function Home() {
     // Start sign in process
     try {
       await firebase.auth().signInWithPopup(provider);
-      document.querySelector('aside').style.display = 'none';
+      document.querySelector("aside").style.display = "none";
     } catch (error) {
       console.log(error.message);
     }
@@ -91,10 +91,8 @@ export default function Home() {
   };
 
   const closeMenu = () => {
-    document.querySelector('aside').style.display = 'none';
-
-  }
-
+    document.querySelector("aside").style.display = "none";
+  };
 
   return (
     <div className="main-content">
@@ -105,17 +103,16 @@ export default function Home() {
       </Head>
 
       <SignMethods {...user}>
-     {user &&  <button className="button" onClick={closeMenu}>
-        
-        <Image
-                  alt="Close"
-                  src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Cross-256.png"
-                  width={25}
-                  height={25}
-                />
-  
-        </button>
-  }
+        {user && (
+          <button className="button" onClick={closeMenu}>
+            <Image
+              alt="Close"
+              src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Cross-256.png"
+              width={25}
+              height={25}
+            />
+          </button>
+        )}
         {user ? (
           <>
             <Button onClick={signOut}>
@@ -143,15 +140,14 @@ export default function Home() {
           </>
         )}
 
-
         <article>
           <nav>
             <ul>
               <li>
-                <Link href="/">
+                <Link href="https://epeixoto.me">
                   <a className="github" style={{ backgroundColor: "#EDAE49" }}>
                     <Image
-                      alt="SignIn with Google"
+                      alt="Euller Peixoto personal Website"
                       src="https://cdn4.iconfinder.com/data/icons/internet-security-flat-2/32/Internet_Security_Browser_webpage_website_web_page-256.png"
                       width={25}
                       height={25}
@@ -162,10 +158,10 @@ export default function Home() {
               </li>
 
               <li>
-                <Link href="/">
+                <Link href="https://github.com/MoranggNormal/random-people">
                   <a className="github" style={{ backgroundColor: "#191919" }}>
                     <Image
-                      alt="SignIn with Google"
+                      alt="Source code on Github"
                       src="https://cdn1.iconfinder.com/data/icons/picons-social/57/github_rounded-256.png"
                       width={25}
                       height={25}
@@ -176,10 +172,10 @@ export default function Home() {
               </li>
 
               <li>
-                <Link href="/">
+                <Link href="https://www.linkedin.com/in/euller-peixoto">
                   <a className="github" style={{ backgroundColor: "#30638E" }}>
                     <Image
-                      alt="SignIn with Google"
+                      alt="Euller Peixoto LinkedIn profile"
                       src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-256.png"
                       width={25}
                       height={25}
@@ -190,10 +186,14 @@ export default function Home() {
               </li>
 
               <li>
-                <Link href="https://www.facebook.com/euller.peixoto.18/">
-                  <a target="_blank" className="github" style={{ backgroundColor: "#1876f0" }}>
+                <Link href="https://www.facebook.com/euller.peixoto.18">
+                  <a
+                    target="_blank"
+                    className="github"
+                    style={{ backgroundColor: "#1876f0" }}
+                  >
                     <Image
-                      alt="SignIn with Google"
+                      alt="Euller Peixoto Facebook profile"
                       src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/facebook-256.png"
                       width={25}
                       height={25}
@@ -207,26 +207,20 @@ export default function Home() {
         </article>
 
         <footer>
-          Made with 
-          
+          Made with
           <span>
-          <Image
-                      alt="SignIn with Google"
-                      src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-256.png"
-                      width={17}
-                      height={17}
-                    />
+            <Image
+              alt="Heart icon"
+              src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-256.png"
+              width={17}
+              height={17}
+            />
           </span>
-         
-           by Euller Peixoto
+          by Euller Peixoto
         </footer>
       </SignMethods>
 
-      {user && <MainChat>
-        {user && <Channel user={user} />}
-      </MainChat>}
-
-
+      {user && <MainChat>{user && <Channel user={user} />}</MainChat>}
     </div>
   );
 }

@@ -25,6 +25,7 @@
     &:hover,
     &:focus {
       filter: brightness(90%);
+      cursor: no-drop;
     }
 
     ::placeholder {
